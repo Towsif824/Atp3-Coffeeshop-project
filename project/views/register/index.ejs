@@ -40,14 +40,20 @@
             <input type="radio" name="gender" value="other">Other</td>
           </tr>
           <tr>
-            <td><label for="img">Select image:</label></td>
-            <td><input type="file" id="img" name="img" accept="image/*"></td>
-            <td><input type="submit">
+            <td><label>Select image:</label></td>
+            <td><input type="file" id="img" name="image" accept="image/*"></td>
+            <tr>
+              <td><label>Membership:</label></td>
+              <td><select name="membership">
+              <option value="Gold">Gold</option>
+              <option value="Silver">Silver</option>
+              <option value="Bronze">Bronze</option>
+              <option value="None">None</option>
+              </select></td>
           </tr>
-
           <tr>
-            <td></td>
-            <td><input type="submit" name="submit" value="Submit"></td>
+            <td><input type="submit"></td>
+          </tr>
           </tr>
         </table>
       </fieldset>

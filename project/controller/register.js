@@ -16,7 +16,9 @@ router.post('/', function(req, res){
 		phone	: req.body.phone,
 		email	: req.body.email,
 		address : req.body.address,
-		gender  : req.body.radio
+		gender  : req.body.gender,
+		image	: req.body.image,
+		membership: req.body.membership
 		
 
 	}

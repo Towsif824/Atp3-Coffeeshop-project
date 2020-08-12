@@ -5,6 +5,7 @@ var register	= require('./controller/register');
 var login 		= require('./controller/login');
 var home 		= require('./controller/home');
 var logout 		= require('./controller/logout');
+var customer 	= require('./controller/customer');
 var app 		= express();
 
 //config
@@ -18,6 +19,7 @@ app.use('/register', register);
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/home', home);
+app.use('/customer', customer);
 
 /*app.get('/admin/user/:id/:name' , function(req,res){
 	res.send(req.params.id+" " +req.params.name);
