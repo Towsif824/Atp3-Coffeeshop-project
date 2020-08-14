@@ -6,30 +6,45 @@
 	table.center {
 				margin-left: auto;
 				margin-right: auto;
+			
 			}
 	</style>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
-<body>
+
+	<body>
+		<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Coffee Shop</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/customer/AllFoodItem">Menu</a></li>
+        <li><a href="/logout">LogOUt</a></li>
+        <li><a href="/customer/delete/<%= userlist.c_id %>">Delete Account</a></li>
+      </ul>
+    </div>
+  </nav>
+
 	<center>
-
-					<h1>Welcome Home! <%= userlist.name %></h1>
-					<h2>My Profile</h2>
-
-</center>
+		<h1>Welcome Home! <%= userlist.name %></h1>
+		<h2>My Profile</h2>
+	</center>
 	<fieldset>
+		
 		<table class="center">
 			<tr>
-				<td>ID:</td><td><%= userlist.id %></td>
+				<td>ID:</td><td><%= userlist.c_id %></td>
 			</tr>
 			<tr>
-				<td>Name:</td><td><%= userlist.name %></td>
+				<td>Name:</td>
+				<td><%= userlist.name %></td>
 			</tr>
 			<tr>
-				<td>User Name:</td><td><%= userlist.username %></td>
+				<td>User Name:</td>
+				<td><%= userlist.username %></td>
 			</tr>
 			<tr>
-				<td>Phone:</td><td><%= userlist.phone %><td>
+				<td>Phone:</td>
+				<td><%= userlist.phone %><td>
 			</tr>
 			<tr>
 				<td>Email:</td><td><%= userlist.email %></td>
@@ -42,7 +57,7 @@
 				<td>Gender:</td><td><%= userlist.gender %></td>
 			</tr>
 			<tr>
-				<td>Image:</td><td><%= userlist.image %></td>
+				<td>Image:</td><td><img alt="User Pic" src="http://localhost:3000/images/upload_images/<%= userlist.image%>" width="230" height="200" class="img-circle img-responsive"></td>
 			</tr>
 			<tr>
 				<td>Membership:</td><td><%= userlist.membership %></td>
@@ -51,17 +66,12 @@
 			
 			<tr>
 				<td></td>
-				<td><a href="/customer/editProfile/<%= userlist.id %>">Edit Profile</a></td>
+				<td><a href="/customer/editProfile/<%= userlist.c_id %>">Edit Profile</a></td>
 			</tr>
 		</table>
+		
 	</fieldset>
-	<table class="center">
-		<tr>
-		  <td><a href="/customer/AllFoodItem">View Food List</a>|</td>
-			<td><a href="/manager/create">Add item</a>|</td>
-			<td><a href="/logout">Logout</a></td>
-		</tr>
-	</table>
+
 
 </body>
 </html>

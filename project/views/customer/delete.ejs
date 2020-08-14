@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Page</title>
+</head>
+<body>
+  
+
+    <form method="post" enctype="multipart/form-data">
+
+      <fieldset>
+        <legend>SignUp</legend>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><%= user.name %></td>
+          </tr>
+          <tr>
+            <td>User Name</td>
+            <td><%= user.username %></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><%= user.password %></td>
+          </tr>
+          <tr>
+            <td><label><b>Phone:</b></label></td>
+            <td><%= user.phone %></td>
+          </tr>
+          <tr>
+            <td><label><b>Email:</b></label></td>
+            <td><%= user.email %></td>
+          </tr>
+          <tr>
+            <td><label><b>Address:</b></label></td>
+            <td><%= user.address %></td>
+          </tr>
+
+          <tr>
+            <td>Gender:</td>
+            <td><%= user.gender %></td>
+          </tr>
+          <tr>
+            <td><label>Select image:</label></td>
+            <td><%= user.image %></td>
+            <tr>
+              <td><label>Membership:</label></td>
+              <td><%= user.membership %></td>
+          </tr>
+          <tr>
+            <td><h3>Are you sure? This can't be undone!</h3><br></td>
+            <td>
+              <input type="hidden" name="id" value="<%= user.c_id %>">
+              <input type="submit" name="submit" value = "Delete"></td>
+          </tr>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <br>
+</body>
+</html>

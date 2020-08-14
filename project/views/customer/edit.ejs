@@ -10,13 +10,13 @@
       </style>
   </head>
   <body>
-    <form method="post">
+    <form method="post" action="/customer/editProfile/<%= user.c_id %>" enctype="multipart/form-data">
       <fieldset>
         <legend>Edit My profile</legend>
         <table class="center">
           <tr>
             <td> ID </td>
-            <td>:<%= user.id %></td>
+            <td><%= user.c_id %></td>
           </tr>
           <tr>
             <td>Name</td>
@@ -43,6 +43,10 @@
           <tr>
             <td>Address</td>
             <td><input type="text" value="<%= user.address %>" required="required" name="address"  id="address"></td>
+          </tr>
+          <tr>
+            <td>Image:</td>
+            <td><input type="file" name="uploaded_image" accept="/"></td>
           </tr>
 
           <tr>

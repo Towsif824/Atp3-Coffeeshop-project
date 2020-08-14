@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Item List page</title>
+  <style>
+  table.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+            h3 {text-align: right;}
+  </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    <form method="post">
+      <center>
+         <h1>Post a comment</h1>
+
+      </center>
+
+      <h3><a href="/home">Back</a>|<a href="/logout">Logout</a></h3>
+
+         
+      <h4>Comments:</h4>
+      <fieldset>
+             <table class="center">
+             <legend><h4><%= food.name %></h4></legend>
+            <tr>
+             <th>ID</th><td>:<%= food.id %></td><td></td>
+            </tr>
+            <tr>
+             <th>NAME</th><td>:<%= food.name %></td><td>
+            </tr>
+            <tr>
+             <th>Price/item</th><td>:<%= food.price %></td>
+            </tr
+            <tr>
+             <th>Suggested</th><td>:<%= food.suggested %></td>
+            <tr>
+             <th>Status</th><td>:<%= food.status %></td>
+            </tr>
+            <tr>
+             <th>Ingredients</th><td>:<%= food.ingredients %></td>
+            </tr>
+            </table>
+            </fieldset></td>
+
+        <% for(var i=0; i < cmtList.length; i++){ %>
+          <table class="center">
+            <tr>
+              <th></th>
+                <td><input type="text" id="" name="cmt" value="<%= cmtList[i].comment %>" readonly><br></td>
+            </tr>
+          </table>
+            <% } %>
+            </td></tr>
+            </table>
+
+
+            <table class="center">
+              <tr>
+                <td><input type="text" name="comment" ><br></td>
+              </tr>
+              <tr>
+                <td><button type="submit" name="choice" value="Comment" class="btn btn-primary">Comment</button></td>
+              </tr>
+
+            </table>
+         
+      </form>
+    </body>
+  </html>

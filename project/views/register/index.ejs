@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Sign Page</title>
+
 </head>
 <body>
-    <form method="post" >
+  
+  <%= typeof msg !='undefined' ? msg :''%> 
+
+    <form method="post" enctype="multipart/form-data">
+
       <fieldset>
         <legend>SignUp</legend>
         <table>
@@ -30,14 +35,15 @@
           </tr>
           <tr>
             <td><label><b>Address:</b></label></td>
-            <td><input type="text" placeholder="Enter Password" name="address" required></td>
+            <td><input type="text" placeholder="Enter address" name="address" required></td>
           </tr>
 
           <tr>
             <td>Gender:</td>
-            <td><input type="radio" name="gender" value="male">Male</br>
-            <input type="radio" name="gender" value="female">Female</br>
-            <input type="radio" name="gender" value="other">Other</td>
+            <td>
+            <input class="with-gap" type="radio" name="gender" value="male">Male</br>
+            <input class="with-gap" type="radio" name="gender" value="female">Female</br>
+            <input class="with-gap" type="radio" name="gender" value="other">Other</td>
           </tr>
           <tr>
             <td><label>Select image:</label></td>
@@ -52,11 +58,12 @@
               </select></td>
           </tr>
           <tr>
-            <td><input type="submit"></td>
+            <td><input type="submit" value="SignUp"></td>
           </tr>
           </tr>
         </table>
       </fieldset>
     </form>
+    <br>
 </body>
 </html>
